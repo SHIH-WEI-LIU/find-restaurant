@@ -5,7 +5,7 @@ const app = express()
 const port = 3000
 const exphbs = require('express-handlebars')
 const restaurantList = require('./restaurant.json')
-const alert = require('alert') //新增alert功能
+// const alert = require('alert') //新增alert功能
 
 // setting template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
@@ -33,11 +33,11 @@ app.get('/search', (req, res) => {
     restaurant.name.includes(keyword) || restaurant.name_en.toLowerCase().includes(keyword.toLowerCase()) || restaurant.category.includes(keyword)
   )
   if (keyword.length === 0) {
-    alert('請輸入有效字串') 
+//     alert('請輸入有效字串') 
     return res.redirect("/")
   }
   if (restaurants.length === 0) {
-    alert('無此餐廳')
+//     alert('無此餐廳')
     return res.redirect("/")
   }
   res.render('index', { restaurants: restaurants, keyword: keyword })
