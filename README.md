@@ -7,7 +7,7 @@ If you are interested in above please try it to discover which do you like !!!
 ## Features
 - Users can see all restaurants and their information on the homepage
    * picture
-   * nae
+   * name
    * category
    * rating
    
